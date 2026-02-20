@@ -4,40 +4,41 @@
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css2?family=Genos:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  body {
+  /* Fond de la page transparent */
+  html, body {
     margin: 0;
+    padding: 0;
     background: transparent;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
 
+  /* Card glassmorphism */
   .widget {
     font-family: 'Genos', sans-serif;
     padding: 30px 50px;
     border-radius: 24px;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.15),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05); /* très léger blanc pour glass */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255,255,255,0.05);
     text-align: center;
+    color: #ffffff; /* couleur pour dark mode */
   }
 
   .time {
     font-size: 72px;
     font-weight: 600;
     letter-spacing: 3px;
-    color: #111;
   }
 
   .label {
     font-size: 14px;
     letter-spacing: 4px;
     margin-top: 8px;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 </style>
 </head>
