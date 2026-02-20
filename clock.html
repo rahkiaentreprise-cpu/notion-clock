@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Genos:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .widget {
+    font-family: 'Genos', sans-serif;
+    padding: 30px 50px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.15),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+  .time {
+    font-size: 72px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #111;
+  }
+
+  .label {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-top: 8px;
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="widget">
+  <div class="time" id="time"></div>
+  <div class="label">HEURE ACTUELLE</div>
+</div>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  document.getElementById('time').textContent = `${hours}:${minutes}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
